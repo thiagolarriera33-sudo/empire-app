@@ -19,9 +19,13 @@ const C = {
   borderSoft: "#1B1B1E", text: "#F2F1ED", textDim: "#8C8C93", textFaint: "#57575D",
   accent: "#D6A94A", accentSoft: "rgba(214,169,74,0.12)", accentBorder: "rgba(214,169,74,0.35)",
   success: "#4ADE80", successSoft: "rgba(74,222,128,0.12)",
-  danger: "#F87171", dangerSoft: "rgba(248,113,113,0.12)",
-};
-
+  danger: "#F87171", 
+};<Crown size={17} style={{ color: C.accent }} />const LogoMark = ({ size = 17 }) => (
+  <svg width={size} height={size} viewBox="0 0 512 512">
+    <path d="M 256 108 L 322 200 L 322 404 L 256 404 Z" fill="#F5DFA0"/>
+    <path d="M 256 108 L 190 200 L 190 404 L 256 404 Z" fill="#D6A94A"/>
+  </svg>
+);
 function AnimatedNumber({ value, decimals = 0, prefix = "", suffix = "" }) {
   const [display, setDisplay] = useState(0);
   const startRef = useRef(null);
